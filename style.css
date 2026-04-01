@@ -173,6 +173,20 @@ body {
     flex-wrap: wrap;
 }
 
+.portfolio-footer {
+    padding: 60px 24px 20px;
+    text-align: center;
+}
+
+.footer-copyright {
+    font-size: 11px;
+    color: #64748b;
+    opacity: 0.6;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 /* Base Button - Zero Movement Enforcement */
 .btn {
     display: flex;
