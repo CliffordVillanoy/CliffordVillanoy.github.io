@@ -1,382 +1,174 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>CMV | Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <!-- Fontawesome CDN Link -->
-    <link rel = "icon" href = "img/icn.png" type = "image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
-    <script src="https://kit.fontawesome.com/641a45ced1.js" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/194199613b.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <!-- Move to up button -->
-    <div class="scroll-button">
-      <a href="#home"><i class="fa-solid fa-arrow-up-from-bracket"></i></a>
-    </div>
-    <!-- navgaition menu -->
-    <nav>
-      <div class="navbar">
-        <div class="logo"><a href="#">CMV;</a></div>
-        <ul class="menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <div class="cancel-btn">
-            <i class="fas fa-times"></i>
-          </div>
-        </ul>
-        <div class="media-icons">
-          <a href="https://www.linkedin.com/in/clifford-villanoy-0a9136265/"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/CliffordVillanoy"><i class="fab fa-github"></i></a>
-          <a href="https://www.behance.net/clifforvillanoy"><i class="fab fa-behance"></i></a>
-          <a href="https://dribbble.com/Eosolite"><i class="fab fa-dribbble"></i></a>
-        </div>
-      </div>
-      <div class="menu-btn">
-        <i class="fas fa-bars"></i>
-      </div>
-    </nav>
+<html lang="en">
 
-    <!-- Home Section Start -->
-    <section class="home" id="home">
-      <div class="home-content">
-        <div class="text">
-          <div class="text-one">Greetings!</div>
-          <div class="text-two">I am Clifford Villanoy</div>
-          <div class="text-three">Software Quality Assurance <br> and UI/UX Enthusiast</div>
-          <!-- <div class="text-four">From Nepal</div> -->
-        </div>
-        <br><br>
-        <div class="button">
-          <a href="./cv/Villanoy, Clifford M. - Resume.pdf" download><button>Download CV</button></a>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMV | CTFL-SQA</title>
+    <link rel="icon" type="image/svg+xml" href="assets/code-svgrepo-com.svg">
+    <meta name="description"
+        content="Cliff Villanoy - Software Quality Assurance Engineer Portfolio. Specializing in structured testing, automation engineering, and quality-driven development.">
 
-      </div>
-    </section>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    <!-- About Section Start -->
-    <section class="about" id="about">
-      <div class="content">
-        <div class="title"><span>Get to Know Me</span></div>
-        <div class="about-details">
-          <div class="left">
-            <img src="img/abt.png" alt="" />
-          </div>
-          <div class="right">
-            <div class="topic">Mastering the Fusion of Form and Functionality</div>
-            <p>
-              Passionate about Software Quality Assurance and enthused by UI/UX design, 
-              my interest lies in ensuring top-notch software functionality and creating
-              visually appealing, user-friendly interfaces. These fields captivate my 
-              attention as I strive for software excellence and engaging user experiences.
-            </p>
-            <br>
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-            <div class="button">
-            <button id="openModalButton">View More</button>
-          </div>
-          <!-- Modal -->
-          <div id="myModal" class="modal">
-            <div class="modal-content">
-              <span class="close">&times;</span>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-              <h2>Professional Experiences</h2>
-              <div class="mcard-row">
-                <!-- Card 1 -->
-                <div class="m-card">
-                  <h3>Front-end Web Development Intern</h3>
-                  <p>Cobra Itech Services Corporation</p>
+<body>
+    <div class="container">
+        <main class="bento-grid">
+            <!-- Row 1 -->
+            <section class="tile hero-tile" id="hero">
+                <div class="hero-content">
+                    <div class="hero-header-row">
+                        <div class="hero-identity">
+                            <h1 class="hero-name">Clifford M. Villanoy</h1>
+                            <p class="hero-role">
+                                ISTQB CTFL - Software Quality Assurance Engineer
+                            </p>
+                        </div>
+                        <img src="assets/CTFL-badge.png" alt="ISTQB Certified" class="istqb-inline">
+                    </div>
+                    <p class="hero-value">
+                        Designing scalable and reliable software systems through structured test automation and quality
+                        engineering.
+                    </p>
+                    <p class="hero-description">
+                        Building maintainable automation frameworks to enhance system stability and accelerate reliable
+                        software delivery.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://github.com/CliffordVillanoy?tab=overview&from=2026-03-01&to=2026-03-31"
+                            target="_blank" rel="noopener noreferrer" class="btn btn-github btn-secondary">
+                            <img src="assets/Github-Icon--Streamline-Svg-Logos.svg" alt="GitHub"
+                                style="width: 20px; height: 20px; filter: brightness(0) invert(1);"> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/clffmv/" target="_blank" rel="noopener noreferrer"
+                            class="btn btn-linkedin btn-primary">
+                            <img src="assets/Linkedin-Icon--Streamline-Svg-Logos.svg" alt="LinkedIn"
+                                style="width: 20px; height: 20px; filter: brightness(0) invert(1);"> LinkedIn
+                        </a>
+                        <button class="btn btn-resume btn-secondary">
+                            <i data-lucide="file-text"></i> Resume
+                        </button>
+                    </div>
                 </div>
-          
-                <!-- Card 2 -->
-                <div class="m-card">
-                  <h3>Software Quality Assurance Intern</h3>
-                  <p>Highly Succeed Incorporated</p>
+            </section>
+
+            <section class="tile project-tile" id="framework">
+                <h2 class="tile-title-large">Test Automation Architecture</h2>
+                <div class="feature-grid">
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> Modular Architecture </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> Page Object Model </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> End-to-End Execution </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> Parallel Execution </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> Data-Driven Testing </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> API + UI Integration </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> CI/CD Integration </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> Execution Control </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> Environment Configuration </div>
+                    <div class="f-item"><i data-lucide="check-circle-2"></i> Reporting & Observability </div>
                 </div>
-          
-                <!-- Add more cards as needed -->
-              </div>
-              
-            </div>
-          </div>
-                    
-    </section>
+                <div class="project-gradient"></div>
+            </section>
 
-    <!-- My Skill Section Start -->
-<section class="skills" id="skills">
-  <div class="content">
-    <div class="title"><span>Proficient Areas</span></div>
-    <div class="skills-details">
-      <div class="text">
-        <div class="topic">Exploring Skills While Learning: From Good to Great</div>
-        <p>
-          As someone deeply passionate about Software Quality Assurance and a dedicated UI/UX enthusiast, 
-          crafting digital experiences isn't just a skill; it's a journey. From mastering code to creating 
-          immersive interfaces, I'm driven by the fusion of design and functionality. Constantly evolving, 
-          I'm committed to pushing boundaries and transitioning from good to exceptional in this dynamic field.
-        </p>
-      </div>
-      
-      </div>
-      <br>
+            <!-- Row 2 -->
+            <section class="tile expertise-tile" id="expertise">
+                <h2 class="tile-title">Testing Expertise</h2>
+                <ul class="feature-list">
+                    <li><i data-lucide="check-circle-2"></i> API Testing</li>
 
-      <div class="skill-cards">
-        <!-- Add your cards here -->
-        <div class="s-card">
-          <div class="card-body">
-            <i class="fab fa-figma"></i> 
-            <h3 class="card-title">Figma</h3>
-            <!-- <p class="card-text">Description or details about HTML skills.</p> -->
-          </div>
-        </div>
+                    <li><i data-lucide="check-circle-2"></i> Sanity Testing </li>
+                    <li><i data-lucide="check-circle-2"></i> Risk-Based Testing </li>
+                    <li><i data-lucide="check-circle-2"></i> End-to-End Testing</li>
+                    <li><i data-lucide="check-circle-2"></i> Functional Testing</li>
+                    <li><i data-lucide="check-circle-2"></i> Regression Testing</li>
+                    <li><i data-lucide="check-circle-2"></i> Exploratory Testing </li>
+                    <li><i data-lucide="check-circle-2"></i> Confirmation Testing </li>
+                    <li><i data-lucide="check-circle-2"></i> User Acceptance Testing </li>
 
-        <div class="s-card">
-          <div class="card-body">
-            <i class="fab fa-html5"></i> 
-            <h3 class="card-title">HTML</h3>
-            <!-- <p class="card-text">Description or details about HTML skills.</p> -->
-          </div>
-        </div>
+                </ul>
+            </section>
 
-        <div class="s-card">
-          <div class="card-body">
-            <i class="fab fa-css3-alt"></i> 
-            <h3 class="card-title">CSS</h3>
-            <!-- <p class="card-text">Description or details about HTML skills.</p> -->
-          </div>
-        </div>
+            <section class="tile stack-tile" id="stack">
+                <h2 class="tile-title">Tech Stack and Tools</h2>
+                <div class="stack-items">
+                    <img src="assets/Python--Streamline-Svg-Logos.svg" alt="Python" title="Python" class="tech-icon">
+                    <img src="assets/Java--Streamline-Svg-Logos.svg" alt="Java" title="Java" class="tech-icon">
+                    <img src="assets/Javascript--Streamline-Svg-Logos.svg" alt="Javascript" title="Javascript"
+                        class="tech-icon">
+                    <img src="assets/Typescript-Icon--Streamline-Svg-Logos.svg" alt="Typescript" title="Typescript"
+                        class="tech-icon">
+                    <img src="assets/Playwright--Streamline-Svg-Logos.svg" alt="Playwright" title="Playwright"
+                        class="tech-icon">
+                    <img src="assets/Cypress-Icon--Streamline-Svg-Logos.svg" alt="Cypress" title="Cypress"
+                        class="tech-icon">
+                    <img src="assets/Selenium--Streamline-Svg-Logos.svg" alt="Selenium" title="Selenium"
+                        class="tech-icon">
+                    <img src="assets/Katalon-Icon--Streamline-Svg-Logos.svg" alt="Katalon" title="Katalon"
+                        class="tech-icon">
+                    <img src="assets/Postman-Icon--Streamline-Svg-Logos.svg" alt="Postman" title="Postman"
+                        class="tech-icon">
+                </div>
+                <div class="stack-glow"></div>
+            </section>
 
-        <div class="s-card">
-          <div class="card-body">
-            <i class="fab fa-square-js"></i> 
-            <h3 class="card-title">JS</h3>
-            <!-- <p class="card-text">Description or details about HTML skills.</p> -->
-          </div>
-        </div>
+            <section class="tile case-study-tile" id="case-study">
+                <h2 class="tile-title">Defect Analysis & Debugging</h2>
+                <ul class="feature-list">
+                    <li><i data-lucide="check-circle-2"></i> Failure Analysis </li>
+                    <li><i data-lucide="check-circle-2"></i> Root Cause Analysis </li>
+                    <li><i data-lucide="check-circle-2"></i> Error Handling Validation </li>
+                    <li><i data-lucide="check-circle-2"></i> API Debugging & Validation </li>
+                    <li><i data-lucide="check-circle-2"></i> Request/Response Verification </li>
+                    <li><i data-lucide="check-circle-2"></i> Defect Tracking and Management </li>
+                </ul>
+            </section>
 
-        <div class="s-card">
-          <div class="card-body">
-            <i class="fa-solid fa-database"></i>
-            <h3 class="card-title">MySQL</h3>
-            <!-- <p class="card-text">Description or details about HTML skills.</p> -->
-          </div>
-        </div>
-
-        <div class="s-card">
-          <div class="card-body">
-            <i class="fab fa-jira"></i> 
-            <h3 class="card-title">JIRA</h3>
-            <!-- <p class="card-text">Description or details about HTML skills.</p> -->
-          </div>
-        </div>
-
-        <!-- Add more cards as needed -->
-      </div>
-    </div>
-  </div>
-</section>
+            <!-- Row 3 -->
+            <section class="tile patterns-tile" id="patterns">
+                <h2 class="tile-title">Certifications</h2>
+                <ul class="feature-list">
+                    <li><img src="assets/certification-diploma-proof-svgrepo-com.svg" alt="Cert"
+                            style="width: 20px; height: 20px;"> ISTQB Certified Tester Foundation Level </li>
+                    <li><img src="assets/certification-diploma-proof-svgrepo-com.svg" alt="Cert"
+                            style="width: 20px; height: 20px;"> Katalon Practitioner Level Certificate </li>
+                    <li><img src="assets/certification-diploma-proof-svgrepo-com.svg" alt="Cert"
+                            style="width: 20px; height: 20px;"> Data Streaming Engineer Foundations </li>
+                    <li><img src="assets/certification-diploma-proof-svgrepo-com.svg" alt="Cert"
+                            style="width: 20px; height: 20px;"> Anthropic: AI Fluency Framework & Foundations </li>
+                </ul>
+                <div class="pattern-gradient"></div>
+            </section>
 
 
-    <!-- My Projects Section Start -->
-<section class="projects" id="projects">
-  <div class="content">
-    <div class="title"><span>Recent Works</span></div>
 
-    <div class="cards">
-      <!--Card 1-->
-      <div class="card">
-        <div class="card-image">
-          <img src="img/dc.png" alt="Project 1">
-        </div>
-        <div class="card-content">
-          <h2 class="card-title">DACI</h2>
-          <p class="card-description">
-            An accounting system designed to streamline financial management and reporting processes.
-          </p>
-           <!-- <a href="#" class="card-link">Read More</a> -->
-        </div>
-      </div>
-      <!--Card 2-->
-      <div class="card">
-        <div class="card-image">
-          <img src="img/eps.png" alt="Eika Printing Services">
-        </div>
-        <div class="card-content">
-          <h2 class="card-title">Eika Printing Services</h2>
-          <p class="card-description">
-            An E-commerce website catering to Eika Printing's products, allowing customers to conveniently order printing services online.
-          </p>
-           <!-- <a href="#" class="card-link">Read More</a> -->
-        </div>
-      </div>
-      <!--Card 3-->
-      <div class="card">
-        <div class="card-image">
-          <img src="img/ts.png" alt="Tail Slap">
-        </div>
-        <div class="card-content">
-          <h2 class="card-title">Tail Slap</h2>
-          <p class="card-description">
-            A user-friendly hotel reservation system that simplifies booking and managing accommodations.
-          </p>
-           <!-- <a href="#" class="card-link">Read More</a> -->
-        </div>
-      </div>
-      <!--Card 4-->
-      <div class="card">
-        <div class="card-image">
-          <img src="img/gm.png" alt="Gamify">
-        </div>
-        <div class="card-content">
-          <h2 class="card-title">Gamify</h2>
-          <p class="card-description">
-            A comprehensive video game rental system that offers a wide range of games to gamers.
-          </p>
-           <!-- <a href="#" class="card-link">Read More</a> -->
-        </div>
-      </div>
-      <!--Card 5-->
-      <div class="card">
-        <div class="card-image">
-          <img src="img/dd.png" alt="Dunkin Donut">
-        </div>
-        <div class="card-content">
-          <h2 class="card-title">Dunkin Donut</h2>
-          <p class="card-description">
-            An early mock website for a digital presence of Dunkin Donuts, showcasing their products and services.
-          </p>
-          <!-- <a href="#" class="card-link">Read More</a> -->
-        </div>
-      </div>
-      <!--Card 6-->
-      <div class="card">
-        <div class="card-image">
-          <img src="img/cs.png" alt="Coming Soon">
-        </div>
-        <div class="card-content">
-          <h2 class="card-title">On its way</h2>
-          <p class="card-description">
-            Excited about more projects soon, showcasing UI designs hinting at captivating and user-centric creations.
-          </p>
-           <!-- <a href="#" class="card-link">Read More</a> -->
-        </div>
-      </div>
-      
-      <!-- Add more cards as needed -->
+
+        </main>
     </div>
 
-  </div>
-</section>
-
-    
-    <!-- My Services Section Start -->
-    <section class="services" id="services">
-      <div class="content">
-        <div class="title"><span>What I Offer</span></div>
-        <div class="boxes">
-          
-          <div class="box">
-            <div class="icon">
-              <i class="fa-brands fa-figma"></i>
-            </div>
-            <div class="topic">UI/UX Designing</div>
-            <p>I craft digital experiences that prioritize users and seamlessly combine looks and usability.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <i class="fa fa-code"></i>
-            </div>
-            <div class="topic">Front-End Web Development</div>
-            <p>
-              I design user-friendly websites that seamlessly merge design and functionality.
-            </p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <i class="fa-solid fa-code-compare"></i>
-            </div>
-            <div class="topic">Software Testing</div>
-            <p>I transform strategies into solutions, ensuring testing precision in detecting and 
-              resolving issues.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <i class="fa-solid fa-diagram-project"></i>
-            </div>
-            <div class="topic">Project Planning</div>
-            <p>I apply strategic planning and effective communication to achieve great results.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="topic">Defect Management and Tracking</div>
-            <p>I employ tools for identifying, managing, and tracking defects throughout the project.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <i class="fa-solid fa-sliders"></i>
-            </div>
-            <div class="topic">Photo Editing</div>
-            <p>I enhance visual content with skillful editing, ensuring clear messages in every image.</p>
-          </div>
-
-          <!-- <div class="box">
-            <div class="icon">
-              <i class="fa fa-share"></i>
-            </div>
-            <div class="topic">Social Media Management</div>
-            <p>I utilize social media's potential, engaging with meaningful communication.</p>
-          </div> -->
-
+    <!-- Resume Modal -->
+    <div id="resume-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-resume-modal" class="modal-close-btn" title="Close">
+                <i data-lucide="x"></i>
+            </button>
+            <iframe id="resume-iframe" class="resume-iframe"></iframe>
         </div>
-      </div>
-    </section>
-
-    <!-- Contact Me section Start -->
-    <section class="contact" id="contact">
-      <div class="content">
-        <div class="title"><span>Get in Touch</span></div>
-        <div class="text">
-          <div class="topic">Have Inquiries?</div>
-          <p>
-            Feel free to reach out to me through these platforms. If you have any questions, 
-            feedback, or are interested in collaborating, I'm just a message away. You can also explore 
-            my LinkedIn, GitHub, Behance, and Dribbble profiles for more information.</p>
-          </p>
-          <div class="contact-icons">
-            <a href="https://www.linkedin.com/in/clifford-villanoy-0a9136265/"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/CliffordVillanoy"><i class="fab fa-github"></i></a>
-            <a href="https://www.behance.net/clifforvillanoy"><i class="fab fa-behance"></i></a>
-            <a href="https://dribbble.com/Eosolite"><i class="fab fa-dribbble"></i></a>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer Section Start -->
-    <footer>
-      <div class="text">
-        <span>Powered by Clifford M. Villanoy | 2022 </span>
-      </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
-    <script src="modal.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="slider.js"></script>
-  </body>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
 </html>
