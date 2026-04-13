@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (resumeBtn && resumeModal && closeResumeModalBtn) {
         resumeBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            // Set src on click so the PDF loads fresh each time
-            resumeIframe.src = resumePdfUrl + '#toolbar=0&navpanes=0';
+            // Set src on click with a timestamp to bypass browser cache
+            resumeIframe.src = `${resumePdfUrl}?v=${new Date().getTime()}#toolbar=0&navpanes=0`;
             resumeModal.classList.add('active');
             document.body.style.overflow = 'hidden';
         });
