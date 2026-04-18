@@ -35,7 +35,7 @@ function initLottieAnimation() {
       if (ctaContainer) ctaContainer.style.opacity = '0';
 
       setTimeout(() => {
-        window.location.href = 'index.html';
+        window.location.href = 'portfolio.html';
       }, 1200);
     });
 
@@ -48,7 +48,7 @@ function initLottieAnimation() {
  * Manual Fallback
  */
 function handleEntrance() {
-  window.location.href = 'index.html';
+  window.location.href = 'portfolio.html';
 }
 
 if (getStartedBtn) {
