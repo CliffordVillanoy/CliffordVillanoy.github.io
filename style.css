@@ -306,9 +306,9 @@ body {
     /* Reset all tile spans to 2-col grid friendly */
     .hero-tile { grid-column: span 2; grid-row: span 1; }
     .project-tile { grid-column: span 2; grid-row: span 1; }
-    .expertise-tile { grid-column: span 1; grid-row: span 1; }
+    .expertise-tile { grid-column: span 2; grid-row: span 1; }
     .stack-tile { grid-column: span 2; grid-row: span 1; }
-    .case-study-tile { grid-column: span 1; grid-row: span 1; }
+    .case-study-tile { grid-column: span 2; grid-row: span 1; }
     .patterns-tile { grid-column: span 2; grid-row: span 1; }
 
     .feature-grid { grid-template-columns: 1fr 1fr; }

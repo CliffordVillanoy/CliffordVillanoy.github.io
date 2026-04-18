@@ -9,6 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100 * index);
     });
 
+    // Update copyright year
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
     // Add subtle parallax effect to gradients on mouse move
     document.addEventListener('mousemove', (e) => {
         const x = e.clientX / window.innerWidth;
