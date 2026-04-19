@@ -124,9 +124,9 @@ body {
 }
 
 .prompt-icon {
-  width: 32px;
-  height: 32px;
-  color: #ffffff !important;
+  width: 26px;
+  height: 26px;
+  filter: brightness(0) invert(1);
 }
 
 .prompt-text {
