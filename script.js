@@ -1,47 +1,88 @@
-// script.js - SQA Portfolio Interactivity
+// script.js - SQA Portfolio Interactivity (Liquid Glass UI)
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Reveal tiles on load with a slight delay
+    // --- Theme Toggle Logic ---
+    const themeBtn = document.getElementById('theme-toggle');
+    const htmlElement = document.documentElement;
+    
+    // Check local storage for theme preference, default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTheme(newTheme);
+        });
+    }
+
+    function setTheme(theme) {
+        htmlElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        
+        // Icons are now handled via CSS and the [data-theme] attribute
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    }
+
+    // --- Liquid Glass Tile Effects (Tilt & Glow) ---
     const tiles = document.querySelectorAll('.tile');
+    
     tiles.forEach((tile, index) => {
+        // 1. Entrance animation timing
         setTimeout(() => {
             tile.style.opacity = '1';
         }, 100 * index);
+
+        // 2. Interactive Glass Effects
+        tile.addEventListener('mousemove', (e) => {
+            // Get coordinates relative to the tile
+            const rect = tile.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+
+            // Set CSS variables for the light reflection pseudo-element
+            tile.style.setProperty('--mouse-x', `${x}px`);
+            tile.style.setProperty('--mouse-y', `${y}px`);
+
+            // 3D Parallax Tilt Effect
+            // Calculate rotation based on cursor position relative to center
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * -3; // Max rotation 3deg
+            const rotateY = ((x - centerX) / centerX) * 3;
+
+            // Apply smooth 3D transform with slight scale
+            tile.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+        });
+
+        tile.addEventListener('mouseleave', () => {
+            // Reset transform smoothly and fade out reflection
+            tile.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+            // The reflection opacity fade out is handled in CSS via hover state
+        });
     });
 
-    // Update copyright year
+    // --- Update copyright year ---
     const yearSpan = document.getElementById('current-year');
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
     }
 
-    // Add subtle parallax effect to gradients on mouse move
-    document.addEventListener('mousemove', (e) => {
-        const x = e.clientX / window.innerWidth;
-        const y = e.clientY / window.innerHeight;
-
-        const overlays = document.querySelectorAll('.gradient-overlay, .gradient-overlay-stack, .pattern-gradient');
-        overlays.forEach(overlay => {
-            overlay.style.transform = `translate(${x * 10}px, ${y * 10}px)`;
-        });
-    });
-
-
-
-    // Smooth scroll for any internal links (if added)
+    // --- Smooth scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 
-    // Resume Modal Logic
+    // --- Resume Modal Logic ---
     const resumeBtn = document.querySelector('.btn-resume');
     const resumeModal = document.getElementById('resume-modal');
     const closeResumeModalBtn = document.getElementById('close-resume-modal');
@@ -51,7 +92,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (resumeBtn && resumeModal && closeResumeModalBtn) {
         resumeBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            // Set src on click with a timestamp to bypass browser cache
             resumeIframe.src = `${resumePdfUrl}?v=${new Date().getTime()}#toolbar=0&navpanes=0`;
             resumeModal.classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -60,10 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
         closeResumeModalBtn.addEventListener('click', () => {
             resumeModal.classList.remove('active');
             document.body.style.overflow = '';
-            resumeIframe.src = ''; // Unload PDF when closed
+            resumeIframe.src = ''; 
         });
 
-        // Close when clicking outside content
         resumeModal.addEventListener('click', (e) => {
             if (e.target === resumeModal) {
                 resumeModal.classList.remove('active');
@@ -72,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close with Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && resumeModal.classList.contains('active')) {
                 resumeModal.classList.remove('active');
